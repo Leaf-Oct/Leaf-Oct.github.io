@@ -2,16 +2,19 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<!-- <script src="js/jquery.min.js"></script> -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 		<script src="./bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css" />
+		<script src="./js/leaf.js"></script>
+		<script src=" https://unpkg.com/showdown/dist/showdown.min.js"></script>
+		<script src="./js/htmlinclude.js"></script>
 		<link rel="shortcut icon" href="./image/滑稽icon.png" />
-		<script>
-			$(function() {
-				$("#white_background").load("headTab.html");
+		<!-- <script>
+			$(document).ready(function() {
+				$("#navigation").load("headTab.html");
 			});
-		</script>
+		</script> -->
 
 		<title>十月叶~( •̀ ω •́ )~的博客</title>
 		<style>
@@ -266,17 +269,24 @@
 			//	}, 1000);
 			//};
 		</script>
-
 		<!-- 背景透明度，左右距离 -->
 		<div style="background-color: #ffffff; margin-left: 10%; margin-right: 10%; opacity: 60%" id="white_background">
-
-
-
-			<h3>十月叶博客 建设阶段</h3>
+			<!-- 顶部导航栏的 -->
+			<div id="navigation">
+				<include src="./headTab"></include>
+				
+			</div>
+			<h3>十月叶博客 建设阶段 放我的计系2笔记出来测试一下效果</h3>
 			<br>
 			<button class="btn btn-outline-info" id="close_bg_button" onclick="$('#sakura_bg').remove();$('#close_bg_button').remove();">关闭背景</button>
 			<!-- <button class="btn btn-outline-info" onclick="$('#sakura_bg').remove();RENDERER.init();">打开背景</button> -->
 			<!-- 图片 -->
+			
+			<div id="content" style="overflow: auto; padding-left: 4%; padding-right: 4%;">
+				<script>
+					document.write(new showdown.Converter().makeHtml(printFile("./计算机系统2.md")));
+				</script>
+			</div>
 		</div>
 
 	</body>
