@@ -4,4 +4,9 @@
 ---
 # This Project is **Deprecated** Temporarily
 # 该项目暂时放弃更新
-##### 2022/6/15
+2022/6/15
+
+# This Project is Deprecated **Permanent** 
+# 该项目永久放弃更新
+New Blog address: blog.leafoct.cn<br>
+新博客地址：blog.leafoct.cn
